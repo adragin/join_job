@@ -1,7 +1,5 @@
 package org.taskRubberArray;
 
-import java.util.Arrays;
-
 public class RubberArray {
     private int size;
     private int[] array;
@@ -43,7 +41,7 @@ public class RubberArray {
     }
 
     public void removeAt(int position) {
-        if(position<0 || position >= size){
+        if (position < 0 || position >= size) {
             return;
         }
         size--;
@@ -58,7 +56,22 @@ public class RubberArray {
         array = temp;
     }
 
+    public int get(int position) {
+        return array[position];
+    }
 
+    public int size() {
+        return size;
+    }
+
+    public boolean contains(int number) {
+        for (int el : array) {
+            if (number == el) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     @Override
